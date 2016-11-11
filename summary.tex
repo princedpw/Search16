@@ -1,0 +1,104 @@
+% Note: must be in third person, must reflect both ``intellectual
+% merit and broader impact'' of the proposal.  ``objectives and
+% methods''
+
+%% From the NSF: The proposal must contain a summary of the proposed
+%% activity suitable for publication, not more than one page in
+%% length.  It should not be an abstract of the proposal, but rather a
+%% self-contained description of the activity that would result if the
+%% proposal were funded.  The summary should be written in the third
+%% person and include a statement of objectives and methods to be
+%% employed.  It must clearly address in separate statements (within
+%% the one-page summary): (1) the intellectual merit of the proposed
+%% activity; and (2) the broader impacts resulting from the proposed
+%% activity.  (See Chapter III for further descriptive information on
+%% the NSF merit review criteria.)  It should be informative to other
+%% persons working in the same or related fields and, insofar as
+%% possible, understandable to a scientifically or technically
+%% literate lay reader.  Proposals that do not separately address both
+%% merit review criteria within the one page Project Summary will be
+%% returned without review.
+
+%% State the "objectives", "goals" or "challenges" of this work
+
+
+\begin{center}\large\bf
+SHF: Small: Collaborative Research:  \\
+Higher-order Type-theoretic Program Synthesis with Examples
+\end{center}
+
+One of the great bottlenecks in many aspects of scientific discovery, in 
+economic development, in the functioning of our government, and even in 
+completing repetitive, personal, day-to-day tasks is the rate at which
+we can write programs that automate our work and analyze data.  
+One key way to alleviate this
+bottleneck is to develop fundamental new techniques to \textit{synthesize} the 
+programs we need to accomplish these tasks.
+
+\textbf{Intellectual Merit:}  Over the last several years, there has
+been tremendous progress in the synthesis of pure, first-order
+functions from a remarkably small number of examples.  Such progress
+has led to high-profile industrial successes such as Gulwani's FlashFill~\cite{flashfill},
+which transforms Excel spreadsheet data, and PowerShell~\cite{powershell},
+which parses structured text files given examples.  
+Reuseable synthesis platforms such 
+Sketch~\cite{sketch}, a synthesizer for first-order, C-like programs, have
+demonstrated their utility by supporting applications such as X, Y, and Z! 
+(Z is so great!!)
+
+\dpw{re-write this to focus on higher-order, polymorphic and refinement types, 
+I think.}
+However, in general, these synthesis techniques have been limited in
+scope to the synthesis of \emph{first-order} And \emph{effect-free} 
+programs.  In contrast, we propose a new research program that will
+tackle the problem of how to synthesis \emph{higher-order} and
+\emph{effectful} programs in their full generality.  The key to doing
+so, we believe, is to exploit not only examples, but also \emph{type theory}
+in the synthesis process.  To illustrate the potential
+of our ideas, we have already built an initial prototype
+system that uses novel algorithms driven by structure of 
+\emph{simple} (recursive) types and is capable of synthesizing
+higher-order functions given only a small number of examples.
+Our proposed research will involve developing new data structures
+and algorithms to improve the scaling properties of our prototype
+and to investigate how to incorporate a broad range of more advanced
+type theories in to our synthesis algorithms.  These new type theories
+will include 
+(1) \emph{polymorphic types} to learn more general functions, 
+(2) \emph{dependent types} to further constrain functions where specification
+via examples is inefficient, 
+(3) \emph{monadic types} to encapsulate simple effects such as exceptions, 
+(4) \emph{linear types} (to encapsulate resource utilization effects such as 
+memory allocation), and 
+(5) \emph{advanced type-and-effect systems} to encapsulate more general
+kinds of effect specifications.
+In order to evaluate our ideas in practice, we propose to develop a new
+general-purpose, higher-order, effectful and typed programming language,
+called \OSynth{}, based around OCaml, which incorporates synthesis
+features in to the language.
+
+
+\dpw{This paragraph perhaps shouldn't be in the summary? Move to intro?}
+The two PIs are uniquely qualified to carry out the proposed research.
+Both PIs are experts in type systems and logic.  PI Zdancewic has been
+developing a pure type-and-example-based system that will form the
+initial kernel of the proposed work.  PI Walker brings experience in
+data-driven synthesis from his past NSF-sponsored work on the PADS
+project~\cite{pads,pads-synth}.
+
+The PIs have worked together successfully in the past and the
+collaboration will get off to a quick start with PI Walker will be on
+sabbatical at Pi Zdancewic's institution (University of Pennsylvania)
+in the 2015-2016 academic year.
+
+\medskip
+\noindent\textbf{Keywords:} linear logic, linear algebra, probability,
+statistics, denotational semantics, nonstandard models, programming
+languages
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "proposal.tex"
+%%% TeX-PDF-mode: t
+%%% End:

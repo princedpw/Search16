@@ -1,0 +1,148 @@
+\newif\ifdraft\drafttrue
+\newif\ifjnf\jnffalse
+
+\makeatletter \@input{config} \makeatother
+
+
+\documentclass[11pt]{article}
+
+
+\ifjnf
+\usepackage[no-math]{fontspec}
+\defaultfontfeatures{Scale=MatchLowercase,Mapping=tex-text}
+\setmainfont{Times New Roman}
+\else
+\usepackage{times}
+\fi
+
+\usepackage[margin=1in,includefoot]{geometry}
+
+\usepackage{color}
+\usepackage{xspace}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{syntax}
+\usepackage{url}
+\usepackage{xspace}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\lstset{
+  language=[Objective]Caml,
+  basicstyle=\small\upshape\ttfamily,
+  framexleftmargin=1ex,
+  framexrightmargin=1ex,
+  showstringspaces=false,
+  commentstyle=\itshape\rmfamily,
+  columns=flexible,
+  stringstyle=\ttfamily
+}
+
+\setlength{\pdfpagewidth}{\paperwidth}
+\setlength{\pdfpageheight}{\paperheight}
+\setlength{\textheight}{8.7in}
+\setlength{\footskip}{0.3in}
+\pagestyle{fancy} 
+
+
+\def\eg{\emph{e.g.\@\xspace}}
+\def\ie{\emph{i.e.\@\xspace}}
+\def\etc{\emph{etc.\@\xspace}}
+\def\etal{\emph{et\ al.\@\xspace}}
+
+% saves space for bullet lists
+\newenvironment{smallItems}{
+\vspace{-8pt}
+\begin{itemize}
+  \setlength{\leftmargin}{0pt}
+%  \setlength{\itemindent}{-10pt}
+%  \setlength{\listparindent}{-50pt}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{\end{itemize}\vspace{-6pt}}
+
+\newenvironment{smallEnums}{
+\vspace{-8pt}
+\begin{enumerate}
+  % \setlength{\itemindent}{-10pt}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{\end{enumerate}\vspace{-6pt}}
+
+\newcommand{\Para}[1]{{\vspace{0.03in}\noindent \bf {#1}}}
+
+% COMMENTS
+
+\newcommand{\comment}[1]{}
+
+\definecolor{pennred}{RGB}{149,0,26}
+\definecolor{cornellred}{RGB}{196,18,48}
+\definecolor{princetonorange}{RGB}{255,143,0}
+\definecolor{tmlblue}{RGB}{0,58,120}  % tml == Toronto Maple Leafs
+\definecolor{brownbrown}{RGB}{121,37,0}
+
+\newcommand{\finish}[1]{\ifdraft#1\else\fi}
+\newcommand{\dpw}[1]{\finish{\textcolor{tmlblue}{[#1 --DPW]}}} 
+\newcommand{\saz}[1]{\finish{\textcolor{pennred}{[#1 --SAZ]}}} 
+
+% This PROP
+
+\newcommand{\cd}[1]{\lstinline[backgroundcolor=\color{white}]$#1$}
+\newcommand{\OSynth}{OSynth}
+
+\newcommand{\mytitle}{Foundations and Applications of \\
+Type-and Example-directed Program Synthesis}
+\newcommand{\myname}{Walker \& Zdancewic}
+
+\lfoot{\small{\myname, \emph{\mytitle}}}
+\cfoot{}
+\rfoot{\small{\thepage}}
+\lhead{}
+\chead{}
+\rhead{}
+\renewcommand{\headrulewidth}{0pt} 
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+\begin{document}
+
+
+% \newpage
+
+%\thispagestyle{empty}
+%\input{summary}
+
+\newpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\begin{centering}
+\section*{{\LARGE  \mytitle}  \\ 
+   {\normalsize SHF : MEDIUM: Collaborative Research} \\
+   {\normalsize David Walker (Princeton)} \\ 
+   {\normalsize Steve Zdancewic (U. of Pennsylvania)} }
+\end{centering}
+
+\makeatletter
+\renewcommand{\paragraph}{%
+  \@startsection{paragraph}{4}%
+  {\z@}{0.5ex \@plus 0.5ex \@minus .2ex}{-1em}%
+  {\normalfont\normalsize\bfseries}%
+}
+\makeatother
+
+\input{body}
+
+%\input{notes}
+
+\newpage
+
+\setcounter{page}{1}
+\bibliographystyle{abbrv}
+\bibliography{synthesis,pads,zdancewic}
+
+\newpage
+
+\end{document}

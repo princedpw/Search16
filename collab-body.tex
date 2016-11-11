@@ -1,0 +1,79 @@
+\section*{Collaboration Plan}
+\label{sec:timeline}
+
+The two PIs are uniquely qualified to carry out the proposed research.
+Both PIs are experts in type systems and logic.  PI Zdancewic has been
+developing a pure type-and-example-based system that will form the
+initial kernel of the proposed work.  PI Walker brings experience in
+data-driven synthesis from his past NSF-sponsored work on the PADS
+project.  Together PIs Walker and Zdancewic have already begun
+to work together and are currently making progress on the technical
+components of this proposal.
+%~\cite{fisher+:jacm,fisher+:popl06,mandelbaum+:pads-ml,fisher+:dirttoshovels,padsweb,daly+:pads-demo}.
+
+% The PIs have worked together successfully in the past and the
+% collaboration will get off to a quick start with PI Walker will be on
+% sabbatical at Pi Zdancewic's institution (University of Pennsylvania)
+% in the 2015-2016 academic year.
+
+During the academic year of 2015-2016, PI Walker is on sabbatical at
+the University of Pennsylvania.  There he and PI Zdancewic have
+already begun a collaboration on this project.  They will work closely
+together for the remainder of the year.  They expect this concentrated
+time together will accelerate the research productivity of the PIs and
+their students.  When the sabbatical is over, the PIs will set up
+weekly Skype video conference calls together and with their students
+to discuss research on program synthesis.  These meetings will
+continue throughout the duration of the grant.  The PIs will also
+schedule periodic in-person meetings.  (The University of Pennsylvania
+and Princeton University are only 1 hour away by car or train.)  We
+have budgeted travel funds both for going to conferences and to
+facilitate commutes back and forth between institutions when
+necessary.
+
+\paragraph*{Software-development Infrastructure.}
+We have set up a joint git 
+repository, which holds our code.  Git will store a main software
+development branch and will allow us to generate experimental branches,
+which may be later merged back in to the core.  Our git repository also
+includes test suites, notes, technical reports, and documents relevant 
+to the project (such as this proposal).
+
+\paragraph*{Research Tasks and Timeline.}
+Table~\ref{fig:timeline} (see the following page)
+summarizes the major pieces of the research
+in terms of area.   The table lists the central research tasks and
+provides expected start and finish times. 
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l||c|c|}
+\hline
+Research Task & Start & Finish\\
+\hline
+\multicolumn{3}{|c|}{Core Type-theoretic Synthesis Algorithms}\\
+\hline
+Negative examples & In progress & Year 1 \\
+Performance optimization & In progress & Year 4 \\
+Example minimization & In progress & Year 4 \\
+\hline
+\multicolumn{3}{|c|}{Advanced Type Systems}\\
+\hline
+Polymorphism, GADTs, refinements & In Progress & Year 1 \\
+Regular expression typing, Dependency & Year 1 & Year 2 \\
+Effect Typing & Year 2 & Year 4 \\
+\hline
+\multicolumn{3}{|c|}{Theory}\\
+\hline
+Meta-theoretic properties & In progress & Year 4 \\
+\hline
+\multicolumn{3}{|c|}{Applications}\\
+\hline
+Synthesizing functional program benchmarks & In progress & Year 4 \\
+Synthesizing configuration transformations & Year 2 & Year 3 \\
+Synthesizing Augeas Lenses & Year 3 & Year 4 \\
+\hline
+\end{tabular}
+\caption{Timeline for investigation and completion of research tasks.}
+\label{fig:timeline}
+\end{table}

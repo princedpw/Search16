@@ -1,0 +1,56 @@
+\newcommand{\maindataCount}{ 43 }
+\begin{figure}[t]
+  \begin{center}
+  \tabcolsep 5.8pt
+  \footnotesize
+  \begin{tabular}{|c|c|c|c|c|}
+  \hline
+  \textbf{Test} & \textbf{ \#Ex } &
+  \textbf{ \#N } & \textbf{T (Ctx)} & \textbf{T (Min)} \\
+  \hline
+
+%%%%% TABLE DATA
+list\_append & 12 & 12 & 0.011 & 0.003 \\
+\hline
+list\_compress & 13 & 28 & 128.339 & 0.073 \\
+\hline
+list\_concat & 6 & 11 & 0.019 & 0.006 \\
+\hline
+list\_drop & 13 & 13 & 1.29 & 0.013 \\
+\hline
+list\_even\_parity & 7 & 13 & 0.518 & 0.004 \\
+\hline
+list\_filter & 8 & 15 & 1.327 & 0.013 \\
+\hline
+list\_fold & 9 & 13 & 0.504 & 0.139 \\
+%\hline
+%list\_hd & 3 & 5 & 0.019 & 0.001 \\
+\hline
+list\_inc & 4 & 8 & 0.004 & 0.00 \\
+%\hline
+%list\_last & 6 & 11 & 0.093 & 0.00 \\
+\hline
+list\_length & 3 & 8 & 0.019 & 0.001 \\
+\hline
+list\_map & 8 & 12 & 0.082 & 0.008 \\
+\hline
+list\_sort\_sorted\_insert & 7 & 11 & 0.009 & 0.008 \\
+\hline
+list\_sorted\_insert & 12 & 24 & 22.016 & 0.122 \\
+\hline
+list\_stutter & 3 & 11 & 0.018 & 0.001 \\
+\hline
+list\_sum & 3 & 8 & 0.005 & 0.002 \\
+\hline
+list\_take & 12 & 15 & 1.147 & 0.112 \\
+%\hline
+%list\_tl & 3 & 5 & 0.02 & 0.001 \\
+
+  \hline
+  \end{tabular}
+  \end{center}
+  \caption{Aggregated benchmark suite results. For each test, we report the number of given examples (\#Ex), the size
+  of the result (\#N), and times taken in seconds to synthesize in a populated context (Ctx) and minimal context (Min).}
+  \label{fig:maindata}
+  \vspace*{-2.5ex}
+\end{figure}
